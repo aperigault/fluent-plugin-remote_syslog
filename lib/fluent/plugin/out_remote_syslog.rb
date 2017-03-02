@@ -19,7 +19,7 @@ module Fluent
     config_param :facility, :string, :default => "user"
     config_param :severity, :string, :default => "notice"
     config_param :tag, :string, :default => "fluentd"
-    config_param :json_format, :boolean, :default => false
+    config_param :json_format, :bool, :default => false
 
     def initialize
       super
