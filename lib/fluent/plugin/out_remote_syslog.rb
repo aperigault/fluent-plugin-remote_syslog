@@ -43,6 +43,7 @@ module Fluent
 
         if @json_format
           record[_time] = time
+        end
 
         tag = rewrite_tag!(tag.dup)
         @loggers[tag] ||= RemoteSyslogLogger::UdpSender.new(@host,
