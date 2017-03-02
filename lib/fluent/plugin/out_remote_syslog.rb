@@ -56,6 +56,7 @@ module Fluent
           @loggers[tag].transmit format(record)
         else
           @loggers[tag].transmit format(tag, time, record)
+        end
       end
     end
   end
