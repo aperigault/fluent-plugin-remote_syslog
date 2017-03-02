@@ -1,6 +1,7 @@
 require "fluent/mixin/config_placeholders"
 require "fluent/mixin/plaintextformatter"
 require 'fluent/mixin/rewrite_tag_name'
+require 'json'
 
 module Fluent
   class RemoteSyslogOutput < Fluent::Output
@@ -54,7 +55,7 @@ module Fluent
           local_hostname: @hostname)
           
         if @json_format
-          @loggers[tag].transmit record
+          @loggers[tag].transmit record.to_json
         else
           @loggers[tag].transmit format(tag, time, record)
         end
