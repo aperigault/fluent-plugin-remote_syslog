@@ -54,7 +54,7 @@ module Fluent
           local_hostname: @hostname)
           
         if @json_format
-          @loggers[tag].transmit format(record)
+          @loggers[tag].transmit record
         else
           @loggers[tag].transmit format(tag, time, record)
         end
