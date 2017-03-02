@@ -25,4 +25,5 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency "remote_syslog_logger", "~> 1.0.0"
   spec.add_runtime_dependency "fluent-mixin-config-placeholders"
   spec.add_runtime_dependency "fluent-mixin-rewrite-tag-name"
+  spec.add_runtime_dependency "json"
 end
