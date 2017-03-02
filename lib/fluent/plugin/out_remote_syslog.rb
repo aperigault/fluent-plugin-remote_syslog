@@ -42,7 +42,7 @@ module Fluent
         end
 
         if @json_format
-          record[_time] = time
+          record[:_time] = time
         end
 
         tag = rewrite_tag!(tag.dup)
